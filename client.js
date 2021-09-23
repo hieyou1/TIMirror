@@ -4,4 +4,5 @@ const id = (eid) => {
 id("startmirror").onclick = async () => {
     let api = new TIWebConnApi();
     api.init(window.alert, window.alert, window.alert, window.alert, window.alert);
+    window.alert(api.getDevices());
 };
