@@ -1,7 +1,7 @@
 const SCREEN_SIZE = 320 * 240 * 2;
 const BIT_5_FACTOR = 255 / 31;
 const BIT_6_FACTOR = 255 / 63;
-const TI_Event = Object.freeze({
+const TI_Event = {
     "TI_DEVICE_CONNECTED": 0,
     "TI_DEVICE_DISCONNECTED": 1,
     "TI_DEVICE_INFO": 2,
@@ -13,7 +13,7 @@ const TI_Event = Object.freeze({
     "TI_DEVICE_INSTALLOS": 8,
     "TI_DEVICE_ECHOTEST": 9,
     "TI_DEVICE_ECHOUPDATE": 10
-});
+};
 class TICalculatorCCode {
     constructor() {
         this.buffer8888 = new Uint8Array(SCREEN_SIZE * 2);
