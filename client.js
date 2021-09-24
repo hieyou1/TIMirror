@@ -3,5 +3,7 @@ const id = (eid) => {
 };
 id("startmirror").onclick = async () => {
     let api = new TI_USB();
-    window.alert(await api.getDevices());
+    let device = await api.getDevices();
+    device = await api.openDevice();
+    window.alert(device);
 };
