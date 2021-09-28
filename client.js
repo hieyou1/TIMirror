@@ -6,4 +6,6 @@ id("startmirror").onclick = async () => {
     let device = await api.getDevices();
     device = await api.openDevice();
     window.alert(device);
+    window.api = api;
+    window.device = device;
 };
