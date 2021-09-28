@@ -8,4 +8,5 @@ id("startmirror").onclick = async () => {
     window.alert(device);
     window.api = api;
     window.device = device;
+    console.log("done");
 };
