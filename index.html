@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="width: 100%; height: 100%;">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIMirror</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+
+
+    <style>
+        /* reused from other projects */
+
+        * {
+            text-align: center;
+        }
+
+        .center {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #main {
+            height: min-content;
+            z-index: 3;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+    </style>
 </head>
-<body>
-    <div id="mirrorbox"><button id="startmirror">Start Mirroring</button></div>
-    <script src="tiusb-1.js"></script>
+
+<body style="width: 100%; height: 100%; background-color: #5f9ea0;">
+    <div class="center card w-50" id="main" style="max-height: 80%;">
+        <div id="card-header" class="card-header">
+            <b>TIMirror</b>
+        </div>
+        <div id="card-body" class="card-body" style="height: min-content;">
+            <div>Be sure calculator is turned on <b>before</b> connecting, otherwise connection may fail.</div>
+            <br />
+            <button class="btn btn-primary" id="startmirror">Connect & Start Mirroring</button>
+        </div>
+    </div>
     <script src="tiusb.js"></script>
+    <!-- <script src="tiusb-1.js"></script> -->
     <script src="client.js"></script>
 </body>
+
 </html>
