@@ -404,7 +404,7 @@ TI_DeviceManager.prototype.removeDevice =
             return false
         }
     };
-TI_DeviceManager.prototype.getDevice = id => {
+TI_DeviceManager.prototype.getDevice = () => {
     return TI_DeviceManager.instance.tiDevice
 };
 const VID = 1105;
