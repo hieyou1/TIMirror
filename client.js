@@ -34,4 +34,15 @@ id("startmirror").onclick = async () => {
         window.requestAnimationFrame(mirror);
     };
     mirror();
+    id("card-body").appendChild(document.createElement("br"));
+    let btnFullscreen = document.createElement("button");
+    btnFullscreen.innerText = "Full Screen";
+    btnFullscreen.classList.add("btn", "btn-primary");
+    btnFullscreen.onclick = () => {
+        canvas.requestFullscreen();
+        canvas.onclick = () => {
+            document.exitFullscreen();
+        };
+    };
+    id("card-body").appendChild(btnFullscreen);
 };
